@@ -2,7 +2,6 @@
   <div class="bg-slate-800 h-full">
     <HeaderView></HeaderView>
     <TopSlider :events="topEvents"></TopSlider>
-    {{ view }}
     <Main :events="events"></Main>
   </div>
 </template>
