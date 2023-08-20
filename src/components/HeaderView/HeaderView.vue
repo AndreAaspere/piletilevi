@@ -1,5 +1,5 @@
 <template>
-  <div class="px-10 pt-10 bg-slate-500">
+  <div class="sticky sm:relative top-0 sm:px-10 sm:pt-10 bg-slate-500 z-50">
     <div class="flex justify-between mb-5 items-center">
       <Logo></Logo>
       <Search></Search>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row font-semibold">
+  <div class="flex flex-row font-semibold sm:flex hidden">
     <div class="p-2 cursor-pointer select-none hover:bg-red-500 flex flex-row" :class="{ 'border-b-2 border-red-600': item.active }"
       v-for="(item, index) in menuItems" :key="index">
       <div>

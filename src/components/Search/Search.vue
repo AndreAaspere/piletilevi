@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-row">
-    <input class="w-[400px]" type="text" placeholder="Search for events, performers, venues">
+    <input class="w-[100px] sm:w-[400px]" type="text" placeholder="Search for events, performers, venues">
     <div class="bg-red-600 rounded-r-full w-12 border-t border-r botder-b border-slate-700">
       <Search class="cursor-pointer mt-2 ml-2" color="white" />
     </div>

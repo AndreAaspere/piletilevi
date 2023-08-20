@@ -1,9 +1,11 @@
 <template>
   <div class="p-5">
-    <div>Muusikasündmused</div>
-    <div class="grid grid-cols-4 gap-4">
-      <div class="bg-slate-700 rounded-md text-slate-200 cursor-pointer" v-for="(event, index) in events" :key="index">
-        <img class="object-cover h-40 rounded-t-md w-full" :src="BASE_URL + event.image" :alt="'Image' + index" />
+    <div class="font-semibold text-lg mb-2">Muusikasündmused</div>
+    <div class="grid sm:grid-cols-4 gap-4">
+      <div class="bg-slate-700 rounded-md text-slate-200 cursor-pointer relative flex flex-row sm:flex-col" v-for="(event, index) in events"
+        :key="index">
+        <Heart class="hidden sm:block cursor-pointer absolute right-1 top-1" fill="blue" style="fill-opacity: .3;" stroke-width="1" />
+        <img class="object-cover h-24 sm:h-40 w-24 sm:w-full rounded-md sm:rounded-t-md " :src="BASE_URL + event.image" :alt="'Image' + index" />
         <!-- TODO: justify-between vertically -->
         <div class="p-2 flex flex-col justify-between h-fit">
           <div class="">
@@ -20,6 +22,7 @@
 <script setup>
 import { defineProps } from 'vue'
 import { formatDate } from '../helper/helper.ts'
+import { Heart } from 'lucide-vue-next'
 
 const BASE_URL = 'https://api.intra.piletilevi.ee'
 

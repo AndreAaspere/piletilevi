@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-600 rounded-md p-5 mx-4 mt-10">
+  <div class="bg-slate-600 rounded-md p-5 mx-4 mt-2 sm:mt-10">
     <div class="flex flex-row justify-between mb-4">
       <div class="text-lg font-semibold">Müügi TOP</div>
       <div class="flex flex-row space-x-2">
@@ -9,7 +9,7 @@
       </div>
     </div>
     <div>
-      <div class="grid grid-cols-5 gap-4">
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
         <div class="text-slate-200 cursor-pointer" v-for="(event, index) in events" :key="index">
           <div class="absolute bg-red-600 w-5 pl-1 text-sm mt-2 rounded-r-full">{{ index + 1 }}</div>
           <img class="object-cover h-24 rounded-md w-full" :src="BASE_URL + event.image" :alt="'Image' + index" />
