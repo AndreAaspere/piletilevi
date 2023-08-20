@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="bg-slate-800 h-screen">
+    <HeaderView></HeaderView>
+    <TopSlider></TopSlider>
+    <MainView :events="events"></MainView>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import { ref, onMounted } from 'vue'
+import MainView from './views/MainView'
+import HeaderView from './components/HeaderView/HeaderView'
+import TopSlider from './components/TopSlider/TopSlider'
+import { getEvents } from './services/api/fetch.ts'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const events = ref()
+
+onMounted(async () => {
+  events.value = await getEvents()
+})
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
