@@ -1,15 +1,20 @@
 <template>
-  <div class="flex flex-row">
-    <div
-    class="p-2 cursor-pointer select-none" :class="{'border-b-2 border-red-600': item.active}" v-for="(item, index) in menuItems" :key="index">
-      {{ item.title }}
+  <div class="flex flex-row font-semibold">
+    <div class="p-2 cursor-pointer select-none hover:bg-red-500 flex flex-row" :class="{ 'border-b-2 border-red-600': item.active }"
+      v-for="(item, index) in menuItems" :key="index">
+      <div>
+        {{ item.title }}
+      </div>
+      <ChevronDown v-show="item.subItems" class="cursor-pointer w-5 mt-[2px]"/>
     </div>
     <div class="my-2 border-l border-slate-200"></div>
-    <div class="p-2">PÖFF</div>
+    <div class="p-2 cursor-pointer select-none hover:bg-red-500">PÖFF</div>
   </div>
 </template>
 
 <script setup>
+import { ChevronDown } from 'lucide-vue-next'
+
 // should be implemented with Vue router
 const menuItems = [
   {

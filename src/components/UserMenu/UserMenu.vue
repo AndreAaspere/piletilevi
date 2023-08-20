@@ -1,15 +1,22 @@
 <template>
-  <div class="flex flex-row">
-    <div>Triin</div>
-    <div>like</div>
-    <div>chart</div>
+  <div class="flex flex-row space-x-6">
+    <div class="flex flex-row space-x-2 relative">
+      <User class="cursor-pointer" />
+      <div class="font-semibold">Triin</div>
+      <div class="bg-green-600 w-3 h-3 rounded-full absolute left-2 top-4"></div>
+    </div>
+    <Heart class="cursor-pointer" />
+    <div class="relative">
+      <ShoppingCart class="cursor-pointer" />
+      <div class="bg-red-600 w-5 h-5 rounded-full absolute left-3 text-center text-white text-sm bottom-3">3</div>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { onMounted } from 'vue'
+import { User, Heart, ShoppingCart } from 'lucide-vue-next'
 
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

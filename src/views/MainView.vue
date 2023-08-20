@@ -6,7 +6,7 @@
         <img class="object-cover h-40 rounded-t-md w-full" :src="BASE_URL + event.image" :alt="'Image' + index" />
         <!-- TODO: justify-between vertically -->
         <div class="p-2 flex flex-col justify-between h-fit">
-          <div class="" >
+          <div class="">
             <div class="text-sm text-blue-300">{{ formattedDate(event.date) }}</div>
             <div class="font-semibold">{{ event.title }}</div>
           </div>
@@ -19,6 +19,7 @@
 
 <script setup>
 import { defineProps } from 'vue'
+import { formatDate } from '../helper/helper.ts'
 
 const BASE_URL = 'https://api.intra.piletilevi.ee'
 

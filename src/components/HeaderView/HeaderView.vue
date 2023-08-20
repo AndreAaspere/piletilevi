@@ -1,10 +1,12 @@
 <template>
-  <div class="flex justify-between">
-    <Logo></Logo>
-    <Search></Search>
-    <UserMenu></UserMenu>
+  <div class="px-10 pt-10 bg-slate-500">
+    <div class="flex justify-between mb-5 items-center">
+      <Logo></Logo>
+      <Search></Search>
+      <UserMenu></UserMenu>
+    </div>
+    <MenuView></MenuView>
   </div>
-  <MenuView></MenuView>
 </template>
 
 <script setup>
