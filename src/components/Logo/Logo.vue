@@ -1,15 +1,13 @@
 <template>
-  <!-- <img class="h-10" :src="logo " alt="Logo" /> -->
-  <img :src="logoMobile" class="h-[4rem]" alt="Logo mobile" />
+  <img v-if="view==='md'" :src="logo" class="h-[4rem]" alt="Logo mobile" />
+  <img v-if="view==='sm'" :src="logoMobile" class="h-[4rem]" alt="Logo mobile" />
 </template>
 
 <script setup>
 
-import { onMounted } from 'vue'
-import logo from '@/assets/Logo/logo.png' // Import the image using the relative path
-import logoMobile from '@/assets/Logo/logo_mobile.png' // Import the image using the relative path
-</script>
+import { inject } from 'vue'
+import logo from '@/assets/Logo/logo.png'
+import logoMobile from '@/assets/Logo/logo_mobile.png'
 
-<style scoped>
-  /* .logo = background-image: url(path_to_image); */
-</style>
+const view = inject('view')
+</script>
