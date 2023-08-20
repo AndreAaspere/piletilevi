@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-800 h-full">
+  <div class="bg-gray-100">
     <HeaderView></HeaderView>
     <TopSlider :events="topEvents"></TopSlider>
     <Main :events="events"></Main>

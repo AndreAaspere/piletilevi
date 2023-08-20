@@ -1,6 +1,6 @@
 <template>
   <img v-if="view==='md'" :src="logo" class="h-[4rem]" alt="Logo mobile" />
-  <img v-if="view==='sm'" :src="logoMobile" class="h-[4rem]" alt="Logo mobile" />
+  <img v-if="view==='sm'" :src="logoMobile" class="h-[4rem] p-2" alt="Logo mobile" />
 </template>
 
 <script setup>

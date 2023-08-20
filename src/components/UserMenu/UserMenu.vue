@@ -10,13 +10,11 @@
       <ShoppingCart class="cursor-pointer" />
       <div class="bg-red-600 w-5 h-5 rounded-full absolute left-3 text-center text-white text-sm bottom-3">3</div>
     </div>
-    <Menu class="cursor-pointer block sm:hidden mr-2" />
   </div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import { User, Heart, ShoppingCart, Menu } from 'lucide-vue-next'
+import { User, Heart, ShoppingCart } from 'lucide-vue-next'
 
 </script>
 

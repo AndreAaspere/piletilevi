@@ -2,10 +2,11 @@
   <div class="p-5">
     <div class="font-semibold text-lg mb-2">Muusikasündmused</div>
     <div class="grid sm:grid-cols-4 gap-4">
-      <div class="sm:bg-slate-700 rounded-md text-slate-200 cursor-pointer relative flex flex-row sm:flex-col"
+      <div class="sm:bg-white rounded-md cursor-pointer relative flex flex-row sm:flex-col"
         v-for="(event, index) in events" :key="index">
         <Heart class="hidden sm:block cursor-pointer absolute right-1 top-1" fill="blue" style="fill-opacity: .3;"
           stroke-width="1" />
+          <!-- TODO add dynamic classes depending image h-w ratio -->
         <img class="object-cover h-24 sm:h-40 w-24 sm:w-full rounded-md sm:rounded-t-md " :src="BASE_URL + event.image"
           :alt="'Image' + index" />
         <!-- TODO: justify-between vertically -->
