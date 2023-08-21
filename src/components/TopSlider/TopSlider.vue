@@ -26,7 +26,7 @@
 
 <script setup>
 import { defineProps, inject } from 'vue'
-import { formatDate } from '../../helper/helper.ts'
+import { formatDate } from '../../helper/helper.js'
 import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
 
 const BASE_URL = 'https://api.intra.piletilevi.ee'
